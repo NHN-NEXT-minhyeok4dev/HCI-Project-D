@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>MH DRAWING TOOL with</title>
+        <link rel="stylesheet" type="text/css" href="css/mhdt.css">
+        <link rel="stylesheet" type="text/css" href="css/leapstrap.css">
+
+    </head>
+    <body class = "containers">
+        <h1 id = 'subject' style = "display:inline; margin-right:10px;"> MH DRAWING TOOL with</h1> <span><img src = "res/leap_logo.png" style="padding:5px;background-color:#fff; width:100px;"></span>
+
+        <canvas id = 'paper' width=870 height=470></canvas>
+
+        <div class = 'main_menu' style="visibility:hidden;">
+            <div id = 'rgb_show'></div>
+            <img id = 'switch' src = 'res/switch.png' width ='70px'>
+
+            <img id = 'new_icon' class="leap-interactive" leap-attractor-x-padding="40" leap-attractor-y-padding="40"src ='res/saving_icon.jpg' width = '50px' onclick = 'menuObj.new_onclick()'>
+
+            <img id = 'coloring_icon' class="leap-interactive" leap-attractor-x-padding="30" leap-attractor-y-padding="30"src ='res/coloring_icon.jpg' width = '50px' onclick ='menuObj.coloring_onclick()'>
+            <input id="detail_RGB_red" type="range" min="0" max="255" value="0" onchange="detail_coloringObj.redRange(this.value)" />
+            <img id='detail_red_icon' src='res/red_plus.png' width='40px'>
+            <input id="detail_RGB_green" type="range" min="0" max="255" value="0" onchange="detail_coloringObj.greenRange(this.value)" />
+            <img id = 'detail_green_icon' src='res/green_plus.png' width='25px'>
+            <input id="detail_RGB_blue" type="range" min="0" max="255" value="0" onchange="detail_coloringObj.blueRange(this.value)" />
+            <img id='detail_blue_icon' src='res/blue_plus.png' width='25px'>
+
+            <img id = 'pencil_icon' class="leap-interactive" leap-attractor-x-padding="40" leap-attractor-y-padding="40"src = 'res/pencil_icon.jpg' width = '50px' onclick = 'menuObj.pencil_onclick()'>
+            <input id="detail_chWidth" type="range" min="1" max="5" value="1" onchange="detail_drawingObj.chWidth(this.value)" />
+            <img id = 'detail_min_pencil' src='res/minus.png' width='25px'>
+            <img id = 'detail_max_pencil' src='res/plus.png' width='30px'>
+
+        </div>
+
+        <script src = "js/mhdt.js"></script>
+        <script src = "js/jquery-1.11.1.js"></script>
+        <script src = "js/leap-0.6.1.js"></script>
+        <script src = "js/leapstrap.js"></script>
+        <script src = "js/myleap.js"></script>
+
+        <div class="leap-cursor-container" style="z-index: 100000; position: fixed; top: 0px; left: 0px;"></div>
+
+    </body>
+</html>

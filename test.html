@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>MH DRAWING TOOL</title>
+        <style>
+			#subject {
+				margin-left: 10px;
+			}
+
+			body {
+				width: 1000px;
+				height: 620px;
+				border: 3px solid white;
+				color: white;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 20px;
+				background-color: black;
+			}
+
+			section {
+				width: 700px;
+				height: 500px;
+				border: 1px solid white;
+				float: left;
+				margin-left: 10px;
+				background-color: #EAEAEA;
+			}
+
+			aside {
+				margin-left: 740px;
+				font-color: white;
+			}
+
+			#menu_select {
+				width: 230px;
+				height: 200px;
+				border: 1px solid white;
+			}
+
+			#detail_select {
+				width: 230px;
+				height: 290px;
+				margin-top: 10px;
+				border: 1px solid white;
+			}
+
+			footer {
+				margin-left: 10px;
+				margin-top: 5px;
+			}
+        </style>
+
+    </head>
+    <body>
+        <h1 id = 'subject'> MH DRAWING TOOL </h1>
+        
+        <section>
+            도화지 넣기
+            <h2 onclick="inputul()" style="color:black">CLICK!</h2>
+        </section>
+
+        <aside>
+            <div id = 'menu_select'>
+                <ul>
+                    <li>
+                        그리기
+                    </li>
+                    <li>
+                        굵기 조절
+                    </li>
+                    <li>
+                        색상 선택
+                    </li>
+                    <li>
+                        패턴 그리기
+                    </li>
+                    <li>
+                        지우개
+                    </li>
+                </ul>
+                
+                
+            </div>
+
+            <div id = 'detail_select'>
+                <div id = 'detail:drawing'>
+                    그냥 드래그
+                </div>
+
+                <div id = 'detail:size'>
+                    굵기 조절바
+                </div>
+
+                <div id = 'detail:coloring'>
+                    <ul>
+                        <li>
+                            색상원
+                        </li>
+                        <li>
+                            선택한 색상 확인을 위한 창
+                        </li>
+                    </ul>
+                </div>
+
+                <div id = 'detail:pattern'>
+                    패턴을 그리는 창
+                </div>
+
+                <div id = 'detail:eraser'>
+                    지우개 그려
+                </div>
+
+                
+            </div>
+        </aside>
+
+        <footer>
+            저작권은 김민혁에게 물어봐
+        </footer>
+
+        <script src = 'test.js'>
+        </script>
+    </body>
+</html>
